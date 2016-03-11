@@ -34,6 +34,11 @@ typedef enum {
   // timeouts are received during pairing.
   INTEROP_AUTO_RETRY_PAIRING,
 
+  // Devices requiring this workaround do not handle Bluetooth Absolute Volume
+  // control correctly, leading to undesirable (potentially harmful) volume levels
+  // or general lack of controlability.
+  INTEROP_DISABLE_ABSOLUTE_VOLUME,
+
   // Some HID devices have proven problematic behaviour if SDP is initiated more
   // while HID connection is in progress or if more than 1 SDP connection is created
   // with those HID devices rsulting in issues of connection failure with such devices.
@@ -58,10 +63,6 @@ typedef enum {
   //Few carkits take long time to start sending AT commands
   //Increase AG_CONN TIMEOUT so that AG connection go through
   INTEROP_INCREASE_AG_CONN_TIMEOUT,
-  // Devices requiring this workaround do not handle Bluetooth Absolute Volume
-  // control correctly, leading to undesirable (potentially harmful) volume levels
-  // or general lack of controlability.
-  INTEROP_DISABLE_ABSOLUTE_VOLUME
 } interop_feature_t;
 
 // Check if a given |addr| matches a known interoperability workaround as identified
