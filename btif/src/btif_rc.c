@@ -559,11 +559,6 @@ static BOOLEAN btif_rc_get_connection_state()
 {
     int clients;
 
-#if (AVRC_ADV_CTRL_INCLUDED == TRUE)
-    if ( (btif_rc_cb.rc_features & BTA_AV_FEAT_ADV_CTRL) &&
-         (btif_rc_cb.rc_features & BTA_AV_FEAT_RCTG))
-#endif
-
     for (clients = 0; clients < btif_max_rc_clients; clients++)
     {
         if (btif_rc_cb[clients].rc_connected == TRUE)
