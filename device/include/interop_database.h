@@ -89,7 +89,7 @@ static const interop_addr_t interop_addr_database[] = {
   {{0x00, 0x14, 0xf1,       0,0,0}, 3, INTEROP_DISABLE_ABSOLUTE_VOLUME},
 
   // VW Car Kit - not enough granularity with volume
-  {{0x00, 0x26, 0x7e,       0,0,0}, 3, INTEROP_DISABLE_ABSOLUTE_VOLUME},
+  {{0x00, 0x26, 0x7e,       0,0,0}, 3, INTEROP_DISABLE_ABSOLUTE_VOLUME}
 
   // Apple Magic Mouse
   {{0x04, 0x0C, 0xCE,       0,0,0}, 3, INTEROP_DISABLE_SDP_AFTER_PAIRING},

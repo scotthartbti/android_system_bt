@@ -360,9 +360,10 @@ void btif_config_flush(void) {
   assert(alarm_timer != NULL);
 
   alarm_cancel(alarm_timer);
+  btif_config_write(0, NULL);
 
   config_flush(CONFIG_FILE_PATH);
-  btif_config_write(0, NULL);
+  btif_config_write();
 }
 
 int btif_config_clear(void){
